@@ -70,9 +70,8 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Override
     public void delete(Long id) {
         repository.deleteById(id);
-    }
+    }    
     
-    @Override
     public UsuarioDto toDto(UsuarioEntity usuarioEntity) {        
         return new UsuarioDto(
             usuarioEntity.getId(), 
@@ -81,8 +80,7 @@ public class UsuarioServiceImpl implements UsuarioService{
             usuarioEntity.getCpf(), 
             usuarioEntity.getDataNascimento());        
     }
-
-    @Override
+    
     public UsuarioEntity toEntity(UsuarioDto dto) {        
         return new UsuarioEntity(
             dto.id(), 
